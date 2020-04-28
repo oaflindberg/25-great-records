@@ -27,6 +27,7 @@ const Single = (props) => {
         tracklist={record && documentToReactComponents(record.fields.trackList)}
         released={`Released: ${record && record.fields.releaseDate}`}
         genre={`Genre: ${record && record.fields.genre}`}
+        spotifyUrl={record && record.fields.spotifyUrl}
       />
     </div>
   );

@@ -15,6 +15,7 @@ const StyledCard = styled.div`
     width: 300px;
     height: auto;
     align-self: center;
+    border-radius: 2px;
     margin: 20px;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
     -webkit-box-reflect: below 10px;

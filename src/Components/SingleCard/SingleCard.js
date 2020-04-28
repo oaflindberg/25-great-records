@@ -4,18 +4,20 @@ import styled from "styled-components";
 export const SingleCard = (props) => {
   return (
     <StyledSingleCard>
-      <div className="record-info">
+      <RecordInfo>
         <h2>
           {props.artist} - {props.title}
         </h2>
         <P>{props.released}</P>
         <P>{props.genre}</P>
-      </div>
-      <img src={props.img} alt={props.alt}></img>
-      <div className="tracklist">
+      </RecordInfo>
+      <A href={props.spotifyUrl}>
+        <Img src={props.img} alt={props.alt}></Img>
+      </A>
+      <TrackList>
         <h4>Tracklist:</h4>
         {props.tracklist}
-      </div>
+      </TrackList>
     </StyledSingleCard>
   );
 };
@@ -37,42 +39,56 @@ const StyledSingleCard = styled.div`
     grid-template-rows: repeat(12, 1fr);
   }
 
-  img {
-    width: 330px;
-    height: auto;
-    margin: 20px 0;
-
-    @media screen and (min-width: 1024px) {
-      grid-column: 7/12;
-      grid-row: 5/8;
-      width: 450px;
-      justify-self: center;
-      -webkit-box-reflect: below 10px;
-      -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left
-            bottom, from(transparent), color-stop(60%, transparent), to(rgba(250, 250, 250, 0.1)));
-    }
-  }
-
-  .record-info {
-    @media screen and (min-width: 1024px) {
-      grid-column: 3/7;
-      grid-row: 6 / 7;
-    }
-  }
-
-  .tracklist {
-    @media screen and (min-width: 1024px) {
-      grid-column: 3/7;
-      grid-row: 8/9;
-    }
-  }
-
   ol {
-    margin: 20px 0 20px 20px;
+    margin: 10px 0 20px 15px;
     font-size: 14px;
+  }
+`;
+
+const RecordInfo = styled.div`
+  @media screen and (min-width: 1024px) {
+    grid-column: 3/7;
+    grid-row: 6 / 7;
   }
 `;
 
 const P = styled.p`
   font-size: 12px;
+`;
+
+const A = styled.a`
+  @media screen and (min-width: 1024px) {
+    grid-column: 7/12;
+    grid-row: 5/8;
+    justify-self: center;
+  }
+`;
+
+const Img = styled.img`
+  width: 330px;
+  height: auto;
+  border-radius: 2px;
+  margin: 20px 0;
+
+  @media screen and (min-width: 1024px) {
+    grid-column: 7/12;
+    grid-row: 5/8;
+    width: 450px;
+    justify-self: center;
+    transition: 250ms ease;
+    -webkit-box-reflect: below 10px;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left
+          bottom, from(transparent), color-stop(60%, transparent), to(rgba(250, 250, 250, 0.1)));
+
+    :hover {
+      transform: scale(1.03);
+    }
+  }
+`;
+
+const TrackList = styled.div`
+  @media screen and (min-width: 1024px) {
+    grid-column: 3/7;
+    grid-row: 8/9;
+  }
 `;
