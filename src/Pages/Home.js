@@ -50,19 +50,6 @@ const StyledHome = styled.div`
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
   scroll-padding: 0 50%;
-
-  ::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(http://www.pngall.com/wp-content/uploads/2018/05/Dust-Free-Download-PNG.png);
-    background-size: cover;
-    filter: grayscale(100%);
-    opacity: 0.15;
-  }
 `;
 
 export default Home;
