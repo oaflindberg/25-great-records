@@ -24,6 +24,11 @@ const StyledCard = styled.div`
 
     @media screen and (min-width: 1024px) {
       width: 450px;
+      transition: 250ms ease;
+
+      :hover {
+        transform: scale(1.03);
+      }
     }
   }
 `;
