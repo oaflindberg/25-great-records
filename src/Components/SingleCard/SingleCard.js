@@ -23,7 +23,7 @@ export const SingleCard = (props) => {
 };
 
 const StyledSingleCard = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -35,6 +35,7 @@ const StyledSingleCard = styled.div`
 
   @media screen and (min-width: 1024px) {
     display: grid;
+    height: 100vh;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
   }
@@ -48,7 +49,8 @@ const StyledSingleCard = styled.div`
 const RecordInfo = styled.div`
   @media screen and (min-width: 1024px) {
     grid-column: 3/7;
-    grid-row: 6 / 7;
+    grid-row: 4 / 6;
+    align-self: center;
   }
 `;
 
@@ -59,7 +61,7 @@ const P = styled.p`
 const A = styled.a`
   @media screen and (min-width: 1024px) {
     grid-column: 7/12;
-    grid-row: 5/8;
+    grid-row: 4/8;
     justify-self: center;
   }
 `;
@@ -72,9 +74,10 @@ const Img = styled.img`
 
   @media screen and (min-width: 1024px) {
     grid-column: 7/12;
-    grid-row: 5/8;
+    grid-row: 4/8;
     width: 450px;
     justify-self: center;
+    align-self: center;
     transition: 250ms ease;
     -webkit-box-reflect: below 10px;
     -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left
@@ -89,6 +92,7 @@ const Img = styled.img`
 const TrackList = styled.div`
   @media screen and (min-width: 1024px) {
     grid-column: 3/7;
-    grid-row: 8/9;
+    grid-row: 6/8;
+    align-self: start;
   }
 `;
