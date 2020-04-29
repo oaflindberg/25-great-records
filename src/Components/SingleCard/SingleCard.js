@@ -71,6 +71,7 @@ const Img = styled.img`
   height: auto;
   border-radius: 2px;
   margin: 20px 0;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.3);
 
   @media screen and (min-width: 1024px) {
     grid-column: 7/12;
