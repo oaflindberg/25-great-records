@@ -27,8 +27,6 @@ const Home = () => {
               <Link key={i} to={`/record/${record.fields.slug}`}>
                 <Card
                   key={i}
-                  artist={record.fields.artist}
-                  title={record.fields.title}
                   img={record.fields.cover.fields.file.url}
                   alt={record.fields.title}
                 ></Card>
