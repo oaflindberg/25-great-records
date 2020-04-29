@@ -10,7 +10,7 @@ export const Card = (props) => {
 };
 
 const StyledCard = styled.div`
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   img {
     width: 300px;
     height: auto;
