@@ -12,6 +12,7 @@ const Home = () => {
     client
       .getEntries({
         content_type: "record",
+        order: "fields.releaseDate",
       })
       .then((entries) => {
         setRecord(entries.items);
