@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Links from "../Links/Links";
+import Arrow from "../Arrow/Arrow";
 
 export const SingleCard = (props) => {
   return (
     <StyledSingleCard>
-      <Links href="/" arrow="&#8592;" />
+      <Arrow href="/" arrow="&#8592;" />
       <RecordInfo>
         <h2>
           {props.artist} - {props.title}

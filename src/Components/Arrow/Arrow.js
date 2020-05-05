@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Links = (props) => {
+const Arrow = (props) => {
   return (
     <StyledLinks href={props.href}>
       <h1>{props.arrow}</h1>
@@ -15,4 +15,4 @@ const StyledLinks = styled.a`
   font-weight: bold;
 `;
 
-export default Links;
+export default Arrow;
